@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCourse.io - Learn something new everyday</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner align-items-center">
+			<a class="logo" href="#">
+				<span class="logo-mark">m</span>
+				<span class="logo-text">MyCourse.io</span>
+			</a>
+
+			<form class="nav-search" role="search" aria-label="Site search" action="results.html" method="get">
+				<input name="q" type="search" placeholder="Search for course" aria-label="Search for course">
+				<button type="submit" class="icon-btn" aria-label="Search">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-3.8-3.8m1.3-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+				</button>
+			</form>
+			<div class="auth-actions">
+				<a class="icon-btn header-cart" href="#" aria-label="Cart">
+					<i class="fa-solid fa-cart-shopping"></i>
+				</a>
+				<a class="btn btn-text" href="#" id="openLogin">Login</a>
+				<button class="btn btn-primary btn-signup">Sign up</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<img class="hero-bg" src="./images/hero.png" alt="" aria-hidden="true">
+			<div class="hero-overlay"></div>
+			<div class="container hero-content">
+				<div class="search-panel align-items-end gap-2 gap-md-3" role="search" aria-label="Course filters">
+					<div class="filter">
+						<label>What do you want to learn?</label>
+						<input id="heroQuery" type="text" placeholder="Find courses, skills, software, etc">
+					</div>
+					<div class="filter">
+						<select>
+							<option selected>Categories</option>
+							<option>Design</option>
+							<option>Developer</option>
+							<option>Business</option>
+							<option>Marketing</option>
+							<option>Photography</option>
+						</select>
+					</div>
+					<div class="filter">
+						<input type="text" placeholder="Topic">
+					</div>
+					<button id="heroSearchBtn" class="btn btn-accent" type="button">Search</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<header class="section-head align-items-center">
+					<h2>Browse Our Top Courses</h2>
+					<ul class="tabs nav nav-underline justify-content-center">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Design</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Developer</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Business</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Marketing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Photography</a>
+						</li>
+					</ul>
+				</header>
+  <!-- article used for the cards can be replace with real data instead of images -->
+				<div class="cards-grid">
+					<article class="course-card tone-pink d-flex flex-column">
+                        <img src="./images/option-1.png" alt="UI Design for Beginners">
+					</article>
+
+					<article class="course-card tone-orange d-flex flex-column">
+						<img src="./images/option 2.png" alt="vue course">
+					</article>
+
+					<article class="course-card tone-green d-flex flex-column">
+						<img src="./images/option 3.png" alt="Mobile Dev React Native">
+					</article>
+
+					<article class="course-card tone-purple d-flex flex-column">
+						<img src="./images/option 4.png" alt="Website Dev Zero to Hero">
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="promo">
+			<div class="container promo-inner align-items-center">
+                <!-- image can be replaced with real data like in example below -->
+				<!-- <div>
+					<h3>Join Klevr now to get 35% off</h3>
+					<p>With our responsive themes and mobile and desktop apps, enjoy a seamless experience on any device so will your blog the best visitors.</p>
+					<button class="btn btn-light">Join Klevr</button>
+				</div> -->
+                <img src="./images/promo.png" alt="">
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<header class="section-head align-items-center">
+					<h2>Trending Courses</h2>
+				</header>
+				<div class="trending-grid">
+					<article class="feature-card">
+						<img src="images/T-b.png" alt="big picture">
+                        <!-- image can be replaced with real data like in example below -->
+						<!-- <div class="feature-overlay">
+							<p class="author">Ana Kursova</p>
+							<h3>Masterclass in Design Thinking, Innovation & Creativity</h3>
+						</div> -->
+					</article>
+
+					<div class="stack">
+						<article class="mini-card d-flex flex-column h-100">
+							<img src="images/Option 5.png" alt="small picture 1">
+						</article>
+						<article class="mini-card d-flex flex-column h-100">
+							<img src="images/Option 6.png" alt="small picture 2">
+						</article>
+						<article class="mini-card d-flex flex-column h-100">
+							<img src="images/Option 7.png" alt="small picture 3">
+						</article>
+						<article class="mini-card d-flex flex-column h-100">
+							<img src="images/Option 8.png" alt="small picture 4">
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- upcoming webinar section can be replaced with real data like in example below -->
+		<section class="section">
+			<div class="container">
+				<header class="section-head align-items-center">
+					<h2>Upcoming Webinar</h2>
+				</header>
+				<div class="cards-grid webinar-grid">
+					<article class="course-card tone-yellow d-flex flex-column h-100">
+                        <img src="images/webinar-1.png" alt="upcoming webinar 1">
+						<!-- <h3>iOS 13 Swift 5 iOS Development</h3>
+						<p class="meta">Ktinn Studio</p>
+						<div class="price"><span class="current">$24.92</span> <s class="old">$32.90</s></div> -->
+					</article>
+					<article class="course-card tone-blue d-flex flex-column h-100">
+                        <img src="images/webinar-2.png" alt="upcoming webinar 2">
+						<!-- <h3>Bootcamp Vue.js Web Framework</h3>
+						<p class="meta">Ktran Studio</p>
+						<div class="price"><span class="current">$24.92</span> <s class="old">$32.90</s></div> -->
+					</article>
+					<article class="course-card tone-purple d-flex flex-column h-100">
+                        <img src="images/webinar-3.png" alt="upcoming webinar 3">
+						<!-- <h3>Website Dev Zero to Hero</h3>
+						<p class="meta">Ktinn Studio</p>
+						<div class="price"><span class="current">$24.92</span> <s class="old">$32.90</s></div> -->
+					</article>
+					<article class="course-card tone-blue d-flex flex-column h-100">
+                        <img src="images/webinar-4.png" alt="upcoming webinar 4">
+						<!-- <h3>Learn Program in 30 Days</h3>
+						<p class="meta">Ktinn Studio</p>
+						<div class="price"><span class="current">$24.92</span> <s class="old">$32.90</s></div> -->
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="recommend">
+			<div class="container recommend-inner">
+				<p>Get personal learning recommendations based on your needs</p>
+				<button class="btn btn-dark">Get Started</button>
+			</div>
+		</section>
+	</main>
+
+	<!-- Login Modal (opens in same window) -->
+	<div class="modal-backdrop" id="loginModal" hidden>
+		<div class="modal-dialog login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+			<button class="auth-close modal-close" id="closeLogin" aria-label="Close">
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+					<path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+			</button>
+			<div class="auth-layout">
+				<aside class="auth-illustration">
+					<img class="illustration-main" src="images/login-1.png" alt="Illustration">
+					<img class="illustration-overlay" src="images/login-2.png" alt="Illustration">
+				</aside>
+				<section class="auth-panel">
+					<div class="auth-card">
+						<a class="logo" href="#">
+							<span class="logo-mark">m</span>
+							<span class="logo-text">MyCourse.io</span>
+						</a>
+						<h1 id="login-title" class="auth-title">Join us and get more benefits. We promise to keep your data safely.</h1>
+						<form class="auth-form" id="loginForm" action="#" method="post" onsubmit="return false">
+							<label class="sr-only" for="modal-email">Email Address</label>
+							<input id="modal-email" type="email" class="form-input" placeholder="Email Address" required>
+							<div class="input-error" id="emailError" hidden>Enter a valid email address</div>
+							<label class="sr-only" for="modal-password">Password</label>
+							<input id="modal-password" type="password" class="form-input" placeholder="Password" required>
+							<button class="btn btn-primary btn-block">Login</button>
+						</form>
+						<div class="auth-sep">or you can</div>
+						<div class="social-logins">
+							<a href="#" class="social-btn facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+								<span> Continue with Facebook</span>
+							</a>
+							<a href="#" class="social-btn apple">
+								<i class="fa-brands fa-apple"></i>
+								<span>Continue with Apple</span>
+							</a>
+							<a href="#" class="social-btn google">
+								<i class="fa-brands fa-google"></i>
+								<span>Continue with Google</span>
+							</a>
+						</div>
+						<p class="auth-foot">Need an Account? <a href="#" class="auth-link">Sign Up</a></p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		(function(){
+			const open = document.getElementById('openLogin');
+			const modal = document.getElementById('loginModal');
+			const close = document.getElementById('closeLogin');
+			const form = document.getElementById('loginForm');
+			if(open && modal && close){
+				open.addEventListener('click', function(e){ e.preventDefault(); modal.hidden = false; });
+				close.addEventListener('click', function(){ modal.hidden = true; });
+				// Disable backdrop auto-close to avoid accidental dismiss while interacting
+				// modal.addEventListener('click', function(e){ if(e.target === modal){ modal.hidden = true; }});
+				window.addEventListener('keydown', function(e){ if(!modal.hidden && e.key === 'Escape'){ modal.hidden = true; }});
+				// Focus the email field on open
+				open.addEventListener('click', function(){
+					setTimeout(function(){
+						const email = document.getElementById('modal-email');
+						if(email){ email.focus(); }
+					}, 0);
+				});
+				// Ensure clicks inside dialog never bubble to the backdrop
+				const dialog = modal.querySelector('.modal-dialog');
+				if(dialog){
+					['click','mousedown','touchstart','pointerdown','touchend'].forEach(function(evt){
+						dialog.addEventListener(evt, function(e){ e.stopPropagation(); }, { passive:true });
+					});
+				}
+			}
+			if(form){
+				form.addEventListener('submit', function(e){
+					e.preventDefault();
+					// No backend – proceed directly to account page
+					window.location.href = 'account.html';
+				});
+			}
+			// Hero search redirect to results page with query
+			const heroBtn = document.getElementById('heroSearchBtn');
+			const heroQuery = document.getElementById('heroQuery');
+			if(heroBtn){
+				heroBtn.addEventListener('click', function(){
+					const q = encodeURIComponent((heroQuery?.value || '').trim());
+					const url = q ? ('results.html?q=' + q) : 'results.html';
+					window.location.href = url;
+				});
+			}
+			// Clicking the search input should also navigate to results
+			document.querySelectorAll('.nav-search input[type="search"]').forEach(function(inp){
+				function go(){
+					const q = encodeURIComponent((inp.value || '').trim());
+					window.location.href = q ? ('results.html?q=' + q) : 'results.html';
+				}
+				inp.addEventListener('click', go);
+				inp.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); go(); }});
+			});
+			if(heroQuery){
+				heroQuery.addEventListener('click', function(){
+					const q = encodeURIComponent((heroQuery.value || '').trim());
+					window.location.href = q ? ('results.html?q=' + q) : 'results.html';
+				});
+			}
+		})();
+	</script>
+
+	<footer class="site-footer">
+		<div class="container footer-top">
+			<a class="logo" href="#">
+				<span class="logo-mark">m</span>
+				<span class="logo-text">MyCourse.io</span>
+			</a>
+			<div class="link-cols">
+				<div class="col">
+					<h5>Web Programming</h5>
+					<a href="#">Mobile Programming</a>
+					<a href="#">Java Beginner</a>
+					<a href="#">PHP Beginner</a>
+				</div>
+				<div class="col">
+					<h5>Adobe Illustrator</h5>
+					<a href="#">Adobe Photoshop</a>
+					<a href="#">Design Logo</a>
+				</div>
+				<div class="col">
+					<h5>Writing Course</h5>
+					<a href="#">Photography</a>
+					<a href="#">Video Making</a>
+				</div>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>Copyright © MyCourse.io 2024. All Rights Reserved</p>
+			<div class="social">
+				<a aria-label="Twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+				<a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+				<a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+

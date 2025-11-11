@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Account - MyCourse.io</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="account-page">
+	<header class="site-header">
+		<div class="container header-inner align-items-center">
+			<a class="logo" href="index.html">
+				<span class="logo-mark">m</span>
+				<span class="logo-text">MyCourse.io</span>
+			</a>
+			<div>
+				<label class="sr-only" for="browseSelect">Browse</label>
+				<select id="browseSelect" class="browse-select" aria-label="Browse categories">
+					<option selected>Browse</option>
+					<option>Design</option>
+					<option>Development</option>
+					<option>Business</option>
+					<option>Marketing</option>
+					<option>Photography</option>
+				</select>
+			</div>
+			
+			<form class="nav-search" role="search" aria-label="Site search" action="results.html" method="get">
+				<input name="q" type="search" placeholder="Search for course" aria-label="Search for course">
+				<button type="submit" class="icon-btn" aria-label="Search">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-3.8-3.8m1.3-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+				</button>
+			</form>
+			<div class="auth-actions">
+				<h6 class="become-instructor">Become Instructor</h6>
+				<a class="icon-btn header-cart" href="#" aria-label="Cart">
+					<i class="fa-solid fa-cart-shopping"></i>
+				</a>
+				<i class="fa-solid fa-bell header-bell"></i>
+				<button class="avatar-btn" id="avatarButton" aria-haspopup="menu" aria-expanded="false">
+					<img class="profile-avatar" src="images/avatar.png" alt="Avatar">
+				</button>
+				<div class="avatar-menu" id="avatarMenu" role="menu" hidden>
+					<div class="avatar-menu__header">
+						<strong>Jonathan Doe</strong>
+						<span>doe.jonathan@email.com</span>
+                        <hr>
+					</div>
+					<hr class="avatar-menu__sep">
+					<a role="menuitem" href="#" class="avatar-menu__item">My Courses</a>
+					<a role="menuitem" href="#" class="avatar-menu__item">My Cart</a>
+					<a role="menuitem" href="#" class="avatar-menu__item">Wishlist</a><hr>
+					<hr class="avatar-menu__sep">
+					<a role="menuitem" href="#" class="avatar-menu__item">Notifications</a>
+					<a role="menuitem" href="#" class="avatar-menu__item">Account Settings</a>
+					<hr class="avatar-menu__sep"><hr>
+					<a role="menuitem" href="#" class="avatar-menu__item is-danger">Logout</a>
+					<div class="avatar-menu__arrow" aria-hidden="true"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="account-main">
+		<div class="container">
+			<h1 class="account-title">My Account</h1>
+			<ul class="nav nav-underline justify-content-center account-tabs">
+				<li class="nav-item"><a class="nav-link active" href="#">Profile</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Personalisation</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Payment Methods</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+			</ul>
+
+			<div class="avatar-wrap">
+				<img class="avatar-img" src="images/avatar.png" alt="Avatar">
+				<button class="avatar-edit" aria-label="Edit avatar">
+					<i class="fa-solid fa-camera"></i>
+				</button>
+			</div>
+
+			<form class="account-form">
+				<label>First Name</label>
+				<input class="line-input" type="text" value="Jonathan">
+
+				<label>Last Name</label>
+				<input class="line-input" type="text" value="Doe">
+
+				<label>Headline</label>
+				<input class="line-input" type="text" value="">
+
+				<label>Language</label>
+				<select class="line-input">
+					<option>English</option>
+					<option>Spanish</option>
+					<option>German</option>
+				</select>
+
+				<label>Link</label>
+				<input class="line-input" type="text" value="www.ktani.io">
+
+				<div class="save-row">
+					<button class="btn btn-primary save-btn" type="button">Save</button>
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<script>
+		(function(){
+			const btn = document.getElementById('avatarButton');
+			const menu = document.getElementById('avatarMenu');
+			if(!btn || !menu) return;
+			function open(){ menu.hidden = false; btn.setAttribute('aria-expanded','true'); }
+			function close(){ menu.hidden = true; btn.setAttribute('aria-expanded','false'); }
+			btn.addEventListener('click', function(e){
+				e.preventDefault();
+				if(menu.hidden){ open(); } else { close(); }
+			});
+			document.addEventListener('click', function(e){
+				if(menu.hidden) return;
+				if(e.target === btn || btn.contains(e.target) || menu.contains(e.target)) return;
+				close();
+			});
+			window.addEventListener('keydown', function(e){
+				if(e.key === 'Escape' && !menu.hidden){ close(); }
+			});
+			// Clicking the header search input should navigate to results
+			document.querySelectorAll('.nav-search input[type="search"]').forEach(function(inp){
+				inp.addEventListener('click', function(){
+					const q = encodeURIComponent((inp.value || '').trim());
+					window.location.href = q ? ('results.html?q=' + q) : 'results.html';
+				});
+				inp.addEventListener('keydown', function(e){
+					if(e.key === 'Enter'){
+						e.preventDefault();
+						const q = encodeURIComponent((inp.value || '').trim());
+						window.location.href = q ? ('results.html?q=' + q) : 'results.html';
+					}
+				});
+			});
+		})();
+	</script>
+
+	<footer class="site-footer">
+		<div class="container footer-top">
+			<a class="logo" href="#">
+				<span class="logo-mark">m</span>
+				<span class="logo-text">MyCourse.io</span>
+			</a>
+			<div class="link-cols">
+				<div class="col">
+					<h5>Web Programming</h5>
+					<a href="#">Mobile Programming</a>
+					<a href="#">Java Beginner</a>
+					<a href="#">PHP Beginner</a>
+				</div>
+				<div class="col">
+					<h5>Adobe Illustrator</h5>
+					<a href="#">Adobe Photoshop</a>
+					<a href="#">Design Logo</a>
+				</div>
+				<div class="col">
+					<h5>Writing Course</h5>
+					<a href="#">Photography</a>
+					<a href="#">Video Making</a>
+				</div>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>Copyright © MyCourse.io 2024. All Rights Reserved</p>
+			<div class="social">
+				<a aria-label="Twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+				<a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+				<a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
+
