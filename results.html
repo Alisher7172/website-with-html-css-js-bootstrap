@@ -46,9 +46,9 @@
 						<i class="fa-solid fa-chevron-down fg-chev"></i>
 					</button>
 					<div class="fg-body">
-						<label class="fg-row"><input type="radio" name="rating" checked> <span class="stars">★★★★★</span> 4.5 & up (5.8K)</label>
-						<label class="fg-row"><input type="radio" name="rating"> <span class="stars">★★★★☆</span> 4.0 & up (12K)</label>
-						<label class="fg-row"><input type="radio" name="rating"> <span class="stars">★★★☆☆</span> 3.0 & up (9.6K)</label>
+						<label class="fg-row"><input type="radio" name="rating" value="4.5"> <span class="stars">★★★★★</span> 4.5 & up (5.8K)</label>
+						<label class="fg-row"><input type="radio" name="rating" value="4.0"> <span class="stars">★★★★☆</span> 4.0 & up (12K)</label>
+						<label class="fg-row"><input type="radio" name="rating" value="3.0"> <span class="stars">★★★☆☆</span> 3.0 & up (9.6K)</label>
 					</div>
 				</div>
 
@@ -58,10 +58,10 @@
 						<i class="fa-solid fa-chevron-down fg-chev"></i>
 					</button>
 					<div class="fg-body">
-						<label class="fg-row"><input type="checkbox"> 0–2 Hours (9.4K)</label>
-						<label class="fg-row"><input type="checkbox" checked> 3–5 Hours (4.1K)</label>
-						<label class="fg-row"><input type="checkbox"> 6–12 Hours (3.8K)</label>
-						<label class="fg-row"><input type="checkbox"> 12+ Hours (1K)</label>
+						<label class="fg-row"><input type="checkbox" name="duration" value="0-2"> 0–2 Hours (9.4K)</label>
+						<label class="fg-row"><input type="checkbox" name="duration" value="3-5"> 3–5 Hours (4.1K)</label>
+						<label class="fg-row"><input type="checkbox" name="duration" value="6-12"> 6–12 Hours (3.8K)</label>
+						<label class="fg-row"><input type="checkbox" name="duration" value="12+"> 12+ Hours (1K)</label>
 					</div>
 				</div>
 
@@ -71,13 +71,13 @@
 						<i class="fa-solid fa-chevron-down fg-chev"></i>
 					</button>
 					<div class="fg-body">
-						<label class="fg-row"><input type="checkbox" checked> Design (3.2K)</label>
-						<label class="fg-row"><input type="checkbox"> Programming (1.4K)</label>
-						<label class="fg-row"><input type="checkbox"> Business & Marketing (809)</label>
-						<label class="fg-row"><input type="checkbox"> Finance (548)</label>
-						<label class="fg-row"><input type="checkbox"> Music & Film (1.9K)</label>
-						<label class="fg-row"><input type="checkbox"> Photo & Video (2.3K)</label>
-						<label class="fg-row"><input type="checkbox"> Writing (753)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Design"> Design (3.2K)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Programming"> Programming (1.4K)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Business"> Business & Marketing (809)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Finance"> Finance (548)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Music"> Music & Film (1.9K)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Photo"> Photo & Video (2.3K)</label>
+						<label class="fg-row"><input type="checkbox" name="category" value="Writing"> Writing (753)</label>
 					</div>
 				</div>
 
@@ -87,9 +87,9 @@
 						<i class="fa-solid fa-chevron-down fg-chev"></i>
 					</button>
 					<div class="fg-body">
-						<label class="fg-row"><input type="checkbox"> Figma</label>
-						<label class="fg-row"><input type="checkbox"> Photoshop</label>
-						<label class="fg-row"><input type="checkbox"> Illustrator</label>
+						<label class="fg-row"><input type="checkbox" name="software" value="Figma"> Figma</label>
+						<label class="fg-row"><input type="checkbox" name="software" value="Photoshop"> Photoshop</label>
+						<label class="fg-row"><input type="checkbox" name="software" value="Illustrator"> Illustrator</label>
 					</div>
 				</div>
 
@@ -99,10 +99,10 @@
 						<i class="fa-solid fa-chevron-down fg-chev"></i>
 					</button>
 					<div class="fg-body">
-						<label class="fg-row"><input type="radio" name="level"> All Levels</label>
-						<label class="fg-row"><input type="radio" name="level" checked> Beginner</label>
-						<label class="fg-row"><input type="radio" name="level"> Intermediate</label>
-						<label class="fg-row"><input type="radio" name="level"> Advanced</label>
+						<label class="fg-row"><input type="radio" name="level" value="All"> All Levels</label>
+						<label class="fg-row"><input type="radio" name="level" value="Beginner"> Beginner</label>
+						<label class="fg-row"><input type="radio" name="level" value="Intermediate"> Intermediate</label>
+						<label class="fg-row"><input type="radio" name="level" value="Advanced"> Advanced</label>
 					</div>
 				</div>
 
@@ -112,15 +112,17 @@
 						<i class="fa-solid fa-chevron-down fg-chev"></i>
 					</button>
 					<div class="fg-body">
-						<label class="fg-row"><input type="checkbox"> English</label>
-						<label class="fg-row"><input type="checkbox"> Spanish</label>
-						<label class="fg-row"><input type="checkbox"> German</label>
+						<label class="fg-row"><input type="checkbox" name="language" value="English"> English</label>
+						<label class="fg-row"><input type="checkbox" name="language" value="Spanish"> Spanish</label>
+						<label class="fg-row"><input type="checkbox" name="language" value="German"> German</label>
 					</div>
 				</div>
+
+				
 			</aside>
 			<section class="results-content">
 				<div class="results-bar">
-					<p id="resultsTitle">Showing 2,312 results of <span id="resultsQueryText">UI Design</span></p>
+					<p id="resultsTitle">Showing <span id="resultsCount">2,312</span> results of <span id="resultsQueryText">cources</span></p>
 					<select class="sort-select" aria-label="Sort">
 						<option>Most Popular</option>
 						<option>Highest Rated</option>
@@ -128,41 +130,40 @@
 					</select>
 				</div>
                 <div class="results-grid" id="resultsGrid">
-                    <article class="course-card tone-purple d-flex flex-column h-100">
+                    <article class="course-card tone-purple d-flex flex-column h-100" data-rating="4.7" data-duration="3-5" data-category="Design" data-level="Beginner" data-language="English" data-software="Figma">
                         <img src="images/webinar-3.png" alt="upcoming webinar 3">
                     </article>
-                    <article class="course-card tone-yellow d-flex flex-column h-100">
+                    <article class="course-card tone-yellow d-flex flex-column h-100" data-rating="4.2" data-duration="6-12" data-category="Programming" data-level="Intermediate" data-language="English" data-software="Photoshop">
                         <img src="images/webinar-1.png" alt="upcoming webinar 1">
                     </article>
-                    <article class="course-card tone-purple d-flex flex-column h-100">
+                    <article class="course-card tone-purple d-flex flex-column h-100" data-rating="4.8" data-duration="3-5" data-category="Design" data-level="Beginner" data-language="English" data-software="Figma">
                         <img src="images/webinar-3.png" alt="upcoming webinar 3">
                     </article>
-                    <article class="course-card tone-blue d-flex flex-column h-100">
+                    <article class="course-card tone-blue d-flex flex-column h-100" data-rating="3.9" data-duration="0-2" data-category="Business" data-level="Beginner" data-language="English" data-software="Illustrator">
                         <img src="images/webinar-4.png" alt="upcoming webinar 4">
                     </article>
-                    <article class="course-card tone-blue d-flex flex-column h-100">
+                    <article class="course-card tone-blue d-flex flex-column h-100" data-rating="4.6" data-duration="12+" data-category="Music" data-level="Advanced" data-language="English" data-software="Figma">
                         <img src="images/webinar-2.png" alt="upcoming webinar 2">
                     </article>
-                    <article class="course-card tone-yellow d-flex flex-column h-100">
+                    <article class="course-card tone-yellow d-flex flex-column h-100" data-rating="4.1" data-duration="6-12" data-category="Programming" data-level="Intermediate" data-language="English" data-software="Photoshop">
                         <img src="images/webinar-1.png" alt="upcoming webinar 1">
                     </article>
-                    <article class="course-card tone-purple d-flex flex-column h-100">
+                    <article class="course-card tone-purple d-flex flex-column h-100" data-rating="4.7" data-duration="3-5" data-category="Design" data-level="Beginner" data-language="English" data-software="Figma">
                         <img src="images/webinar-3.png" alt="upcoming webinar 3">
                     </article>
-                    <article class="course-card tone-blue d-flex flex-column h-100">
+                    <article class="course-card tone-blue d-flex flex-column h-100" data-rating="3.8" data-duration="0-2" data-category="Business" data-level="Beginner" data-language="English" data-software="Illustrator">
                         <img src="images/webinar-4.png" alt="upcoming webinar 4">
                     </article>
-                    <article class="course-card tone-blue d-flex flex-column h-100">
+                    <article class="course-card tone-blue d-flex flex-column h-100" data-rating="4.5" data-duration="12+" data-category="Music" data-level="Advanced" data-language="English" data-software="Figma">
                         <img src="images/webinar-2.png" alt="upcoming webinar 2">
                     </article>
-                    </article>
-                    <article class="course-card tone-purple d-flex flex-column h-100">
+                    <article class="course-card tone-purple d-flex flex-column h-100" data-rating="4.6" data-duration="3-5" data-category="Design" data-level="Intermediate" data-language="English" data-software="Figma">
                         <img src="images/webinar-3.png" alt="upcoming webinar 3">
                     </article>
-                    <article class="course-card tone-blue d-flex flex-column h-100">
+                    <article class="course-card tone-blue d-flex flex-column h-100" data-rating="4.0" data-duration="0-2" data-category="Business" data-level="Beginner" data-language="English" data-software="Illustrator">
                         <img src="images/webinar-4.png" alt="upcoming webinar 4">
                     </article>
-                    <article class="course-card tone-blue d-flex flex-column h-100">
+                    <article class="course-card tone-blue d-flex flex-column h-100" data-rating="4.3" data-duration="6-12" data-category="Programming" data-level="Intermediate" data-language="English" data-software="Photoshop">
                         <img src="images/webinar-2.png" alt="upcoming webinar 2">
                     </article>
                 </div>
@@ -238,6 +239,9 @@
 			if(input){ input.value = q; }
 			const span = document.getElementById('resultsQueryText');
 			if(span){ span.textContent = q || span.textContent; }
+			// initialize count
+			const countSpan = document.getElementById('resultsCount');
+			if(countSpan){ countSpan.textContent = document.querySelectorAll('#resultsGrid .course-card').length; }
 
 			// Collapsible filters
 			document.querySelectorAll('.filter-group .fg-head').forEach(function(btn){
@@ -246,7 +250,7 @@
 					if(group){ group.classList.toggle('is-open'); }
 				});
 			});
-			// Clear filters (UI-only)
+			// Clear filters
 			const clear = document.getElementById('clearFilters');
 			if(clear){
 				clear.addEventListener('click', function(e){
@@ -255,8 +259,80 @@
 						if(inp.type === 'checkbox'){ inp.checked = false; }
 						if(inp.type === 'radio'){ inp.checked = false; }
 					});
+					applyFilters();
 				});
 			}
+
+			// Filtering logic (case-insensitive, only enforce selected groups)
+			function readMulti(name){
+				return Array.from(document.querySelectorAll('.filters input[name="'+name+'"]:checked'))
+					.map(function(i){ return (i.value || '').toLowerCase(); });
+			}
+			function getMinRating(){
+				// radios named "rating"
+				const r = document.querySelector('.filters input[name="rating"]:checked');
+				return r ? parseFloat(r.value) : -Infinity;
+			}
+			function getLevel(){
+				// radios named "level"
+				const l = document.querySelector('.filters input[name="level"]:checked');
+				return l ? (l.value || '').toLowerCase() : '';
+			}
+			function normalize(v){ return (v || '').toString().toLowerCase(); }
+			function passes(item, f){
+				const rating = parseFloat(item.dataset.rating || '0');
+				// use dataset.<name> for data-* attributes
+				const dur = normalize(item.dataset.duration);
+				const cat = normalize(item.dataset.category);
+				const soft = normalize(item.dataset.software);
+				const lang = normalize(item.dataset.language);
+				const lvl = normalize(item.dataset.level);
+				if(Number.isFinite(f.minRating) && f.minRating !== -Infinity && rating < f.minRating) return false;
+				if(f.durations.length && !f.durations.includes(dur)) return false;
+				if(f.categories.length && !f.categories.includes(cat)) return false;
+				if(f.software.length && !f.software.includes(soft)) return false;
+				if(f.languages.length && !f.languages.includes(lang)) return false;
+				if(f.level && f.level !== 'all' && lvl !== f.level) return false;
+				return true;
+			}
+			function applyFilters(){
+				const filters = {
+					minRating: getMinRating(),
+					durations: readMulti('duration'),
+					categories: readMulti('category'),
+					software: readMulti('software'),
+					languages: readMulti('language'),
+					level: getLevel()
+				};
+				const hasAny =
+					(filters.minRating !== -Infinity) ||
+					filters.durations.length ||
+					filters.categories.length ||
+					filters.software.length ||
+					filters.languages.length ||
+					(!!filters.level && filters.level !== 'all');
+				let visible = 0;
+				document.querySelectorAll('#resultsGrid .course-card').forEach(function(card){
+					const ok = hasAny ? passes(card, filters) : true;
+					if(ok){
+						card.classList.remove('is-hidden');
+						card.hidden = false;
+						card.style.display = '';
+						visible++;
+					}else{
+						card.classList.add('is-hidden');
+						card.hidden = true;
+						card.style.display = 'none';
+					}
+				});
+				const countSpanEl = document.getElementById('resultsCount');
+				if(countSpanEl){ countSpanEl.textContent = visible; }
+			}
+			document.querySelectorAll('.filters input').forEach(function(inp){
+				inp.addEventListener('change', applyFilters);
+				inp.addEventListener('input', applyFilters);
+			});
+			applyFilters();
 		})();
 	</script>
 </body>
